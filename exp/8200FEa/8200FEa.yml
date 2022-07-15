@@ -7,7 +7,7 @@ googlecloud:
 
 
 experiment:
-  script: "src/completo/z912_FE_UTN.r"
+  script: "src/completo/z913_FE_UTN.r"
   restart: FALSE
   name: "exp"
   type: "FeatureEngineering"
@@ -26,7 +26,14 @@ param:
   variablesmanuales: TRUE   # SE AGREGAN VARIABLES MANUALES
 
   acumulavars: FALSE   #a lo nuevo lo va aplicando
-
+  
+  #crea variables {0,1}  con las hojas de un random forest, ATENCION que explota !!
+  randomforest:    
+    correr:        TRUE
+    num.trees:        50
+    max.depth:         4
+    min.node.size:   500
+    mtry:             13
 
   #lags y sus deltas
   lags: 
@@ -36,7 +43,7 @@ param:
     canaritos: [   0.0,   0.0,  0.0,  0.0,   0.0,   0.2 ]  #porcentaje de canaritos asesinos, del total de columnas del dataset, 0 indica NO reducir campos por canaritos
 
 
-  tendenciaYmuchomas:  #todos FALSE
+  tendenciaYmuchomas:  #todos TRUE
     correr:    [  TRUE, TRUE, TRUE, TRUE ]   #tendencias a correr, es lo que controla y se impone al resto
     ventana:   [     6,     3,    9,     12 ]   #tamaño de la ventana, solo se corren las que dicen  correr=TRUE
     tendencia: [  TRUE,  TRUE,  TRUE,  TRUE ]   #pendiente de la recta ajustada por cuadrados minimos
