@@ -33,7 +33,7 @@ param:
     num.trees:        50
     max.depth:         8
     min.node.size:   500
-    mtry:             20
+    mtry:             25
 
   #lags y sus deltas
   lags: 
