@@ -12,7 +12,7 @@ experiment:
   name: "exp"
   type: "HyperparameterTuning"
   tags: [ "Combinado" ]
-  requires:   [ "8212TSa" ]
+  requires:   [ "8212TSc" ]
 
 
 param:
