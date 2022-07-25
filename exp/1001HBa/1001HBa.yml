@@ -13,7 +13,7 @@ experiment:
   type: "hybridisation"
   tags: [ "hybrid" ]
   description: "Hibridacion de Semillerios"
-  requires:   [ "8212ZZb", "termonuclear-ZZa"" ]  
+  requires:   [ "8212ZZb", "termonuclear-ZZa" ]  
 
 param:
   KA_start:  8000
